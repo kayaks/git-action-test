@@ -1,3 +1,5 @@
-const getName = require('./getName');
+const getName = require('./utils/getName');
+const getAge = require('./utils/getAge');
 
-console.log(getName);
+
+console.log(`Hey ${getName()}-${getAge()}`);
