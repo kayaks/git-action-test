@@ -1,0 +1,15 @@
+{
+  "name": "git-action-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "jest"
+  },
+  "author": "Nikita Baturin",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.1.0"
+  }
+}
