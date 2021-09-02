@@ -1,14 +1,22 @@
 const http = require('http');
 
-const server = http.createServer((req, res) => {
-    res.sendDate = false;
-    res.statusCode = 599;
-    res.statusMessage = 'Crazy thing found';
+const server = http.createServer((request, response) => {
+    response.sendDate = false;
+    // response.statusCode = 599;
+    // response.statusMessage = 'Crazy thing found';
 
+    response.setHeader('Author', 'Nikita Baturin');
+    response.setHeader('Content-Type', 'text/html');
 
-    res.setHeader('Author', 'Nikita Baturin');
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello client');
+    switch(request.url) {
+        case '/': {
+            response.end('<strong>Hello client</strong><ul><li><a href="/user">User page</a></li></ul>');
+        }
+        case '/user': {
+            response.end('Hello Nikita<ul><li><a href="/">Home page</a></li></ul>');
+        }
+        default: response.end('Hello client');
+    }
 }) 
 
 server.listen(9999, () => console.log('Server listening on 9999 port'));
