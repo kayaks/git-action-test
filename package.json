@@ -2,10 +2,10 @@
   "name": "git-action-test",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node index",
-    "test": "jest"
+    "start": "nodemon server/index.js",
+    "test": "jest --verbose"
   },
   "author": "Nikita Baturin",
   "license": "ISC",
