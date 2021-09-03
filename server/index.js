@@ -3,6 +3,8 @@ const hasParams = require('../utils/hasParams');
 
 const serverOrigin = 'http://localhost:9999/'
 
+const PORT = process.env.PORT || 80;
+
 const server = http.createServer((request, response) => {
 
     response.setHeader('Content-Type', 'text/html')
@@ -27,4 +29,4 @@ const server = http.createServer((request, response) => {
     }
 }) 
 
-server.listen(9999, () => console.log('Server listening on 9999 port'));
+server.listen(PORT, () => console.log(`Server listening on ${PORT} port`));
