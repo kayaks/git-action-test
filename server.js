@@ -1,7 +1,9 @@
 const http = require('http');
-const hasParams = require('../utils/hasParams');
+const hasParams = require('./utils/hasParams');
 
-const serverOrigin = 'http://localhost:9999/'
+const serverOrigin = 'http://localhost:3000/'
+
+const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((request, response) => {
 
@@ -27,5 +29,4 @@ const server = http.createServer((request, response) => {
     }
 }) 
 
-
-module.exports = server;
+server.listen(PORT, () => console.log(`Server listening on ${PORT} port`));
