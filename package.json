@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node ./bin/www",
     "start:watch": "nodemon server/index.js",
     "test": "jest --verbose"
   },
