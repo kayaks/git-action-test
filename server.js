@@ -3,7 +3,7 @@ const hasParams = require('./utils/hasParams');
 
 const serverOrigin = 'http://localhost:3000/'
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1337;
 
 const server = http.createServer((request, response) => {
 
